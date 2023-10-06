@@ -2,7 +2,10 @@
 
 # AspNetCore.Cqrs
 
-**ASP.NET Core** API setup using Command Query Responsibility Segregation (CQRS). The solution follows the 'Different Read/Write Models, Single Database' approach described here: https://medium.com/better-programming/choosing-a-cqrs-architecture-that-works-for-you-02619555b0a0
+**ASP.NET Core** API setup using Command Query Responsibility Segregation (CQRS). 
+The solution follows the 'Different Read/Write Models, Single Database' approach described here: https://medium.com/better-programming/choosing-a-cqrs-architecture-that-works-for-you-02619555b0a0
+
+**MediatR** is used to implement Command, Query and Domain Event handling in the project.
 
 - **Write Side**: Entity Framework Core is used for Commands
 - **Read Side**: Dapper is used for Queries

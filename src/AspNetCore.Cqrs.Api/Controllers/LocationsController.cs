@@ -10,9 +10,9 @@ namespace AspNetCore.Cqrs.Api.Controllers
     [Produces("application/json")]
     public sealed class LocationsController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        private readonly ISender _mediator;
 
-        public LocationsController(IMediator mediator)
+        public LocationsController(ISender mediator)
         {
             _mediator = mediator;
         }

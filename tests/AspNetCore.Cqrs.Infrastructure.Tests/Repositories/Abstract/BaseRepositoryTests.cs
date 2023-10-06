@@ -33,7 +33,7 @@ namespace AspNetCore.Cqrs.Infrastructure.Tests.Repositories.Abstract
 
             var env = Mock.Of<IHostEnvironment>();
             containerBuilder.RegisterInstance(env);
-            containerBuilder.RegisterInstance(Mock.Of<IMediator>());
+            containerBuilder.RegisterInstance(Mock.Of<IPublisher>());
             Database = new WeatherContext(options, env);
             Database.Database.EnsureCreated();
 

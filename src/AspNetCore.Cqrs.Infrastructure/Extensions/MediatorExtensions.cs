@@ -6,7 +6,7 @@ namespace MediatR
 {
     internal static class MediatorExtensions
     {
-        public static async Task DispatchEventsAsync(this IMediator mediator, WeatherContext context)
+        public static async Task DispatchEventsAsync(this IPublisher mediator, WeatherContext context)
         {
             var aggregateRoots = context.ChangeTracker
                 .Entries<AggregateRoot>()
@@ -23,7 +23,7 @@ namespace MediatR
             ClearDomainEvents(aggregateRoots);
         }
 
-        private static async Task DispatchDomainEventsAsync(this IMediator mediator, List<DomainEvent> domainEvents)
+        private static async Task DispatchDomainEventsAsync(this IPublisher mediator, List<DomainEvent> domainEvents)
         {
             foreach (var domainEvent in domainEvents)
             {

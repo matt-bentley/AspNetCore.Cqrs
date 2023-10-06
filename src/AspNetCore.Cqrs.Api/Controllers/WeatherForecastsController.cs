@@ -13,9 +13,9 @@ namespace AspNetCore.Cqrs.Api.Controllers
     [Produces("application/json")]
     public sealed class WeatherForecastsController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        private readonly ISender _mediator;
 
-        public WeatherForecastsController(IMediator mediator)
+        public WeatherForecastsController(ISender mediator)
         {
             _mediator = mediator;
         }

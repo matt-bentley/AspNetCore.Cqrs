@@ -8,10 +8,10 @@ namespace AspNetCore.Cqrs.Infrastructure.Repositories
     internal sealed class UnitOfWork : IUnitOfWork
     {
         private readonly WeatherContext _context;
-        private readonly IMediator _mediator;
+        private readonly IPublisher _mediator;
 
         public UnitOfWork(WeatherContext context,
-            IMediator mediator)
+            IPublisher mediator)
         {
             _context = context;
             _mediator = mediator;
