@@ -21,7 +21,7 @@ namespace AspNetCore.Cqrs.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(List<WeatherForecastReadModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(WeatherForecastReadModel), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(Envelope), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Get(Guid id)
         {
